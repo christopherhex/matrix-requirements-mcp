@@ -1,0 +1,49 @@
+{
+  "manifest_version": "0.2",
+  "name": "matrix-requirements-mcp",
+  "display_name": "Matrix Requirements MCP",
+  "version": "0.0.4",
+  "description": "MCP server for Matrix Requirements ALM integration",
+  "author": {
+    "name": "Christopher Hex",
+    "email": "christopher.hex@fibricheck.com"
+  },
+  "server": {
+    "type": "node",
+    "entry_point": "dist/index.js",
+    "mcp_config": {
+      "command": "node",
+      "args": [
+        "${__dirname}/dist/index.js"
+      ],
+      "env": {
+        "MATRIX_URL": "${user_config.matrix_url}",
+        "MATRIX_TOKEN": "${user_config.matrix_token}"
+      }
+    }
+  },
+  "user_config": {
+    "matrix_url": {
+      "type": "string",
+      "title": "Matrix Requirements URL",
+      "description": "URL of the Matrix Requirements instance",
+      "sensitive": false,
+      "required": true,
+      "default": "https://qompium.matrixreq.com"
+    },
+    "matrix_token": {
+      "type": "string",
+      "title": "Matrix Requirements API Token",
+      "description": "API token for authenticating with Matrix Requirements",
+      "sensitive": true,
+      "required": true,
+      "default": ""
+    }
+  },
+  "keywords": [
+    "matrix",
+    "regulatory",
+    "mcp"
+  ],
+  "license": "ISC"
+}

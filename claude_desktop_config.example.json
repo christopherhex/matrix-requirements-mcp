@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "matrix-requirements": {
+      "command": "node",
+      "args": ["/absolute/path/to/matrix-req-mcp/dist/index.js"],
+      "env": {
+        "MATRIX_URL": "https://your-instance.matrixreq.com",
+        "MATRIX_TOKEN": "your-api-token-here"
+      }
+    }
+  }
+}

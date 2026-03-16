@@ -1,0 +1,6 @@
+node_modules/
+dist/
+*.js.map
+.env
+.mcpb
+.DS_Store
