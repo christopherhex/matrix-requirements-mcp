@@ -49,6 +49,7 @@ async function getProject(projectName: string): Promise<Project> {
   if (!project) {
     throw new Error(`Project '${projectName}' not found or could not be opened.`);
   }
+  await api.setProject(projectName);
   return project;
 }
 
@@ -94,7 +95,7 @@ function serializeFolder(folder: TreeFolder): Record<string, unknown> {
 
 const server = new McpServer({
   name: "matrix-requirements",
-  version: "1.0.0",
+  version: "1.0.1",
 });
 
 // ---- List Projects --------------------------------------------------------

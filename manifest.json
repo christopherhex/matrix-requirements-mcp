@@ -2,7 +2,7 @@
   "manifest_version": "0.2",
   "name": "matrix-requirements-mcp",
   "display_name": "Matrix Requirements MCP",
-  "version": "0.0.4",
+  "version": "1.0.1",
   "description": "MCP server for Matrix Requirements ALM integration",
   "author": {
     "name": "Christopher Hex",
