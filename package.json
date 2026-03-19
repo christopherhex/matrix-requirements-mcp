@@ -7,7 +7,8 @@
     "matrix-requirements-mcp": "dist/index.js"
   },
   "scripts": {
-    "build": "tsc",
+    "build": "esbuild src/index.ts --bundle --minify --platform=node --target=node18 --outfile=dist/index.js --banner:js=\"const __importMetaUrl=require('url').pathToFileURL(__filename).href;\" --define:import.meta.url=__importMetaUrl",
+    "typecheck": "tsc --noEmit",
     "start": "node dist/index.js",
     "dev": "tsc --watch"
   },
@@ -26,7 +27,7 @@
   },
   "devDependencies": {
     "@types/node": "^25.3.0",
-    "esbuild": "^0.27.3",
+    "esbuild": "^0.27.4",
     "typescript": "^5.9.3"
   }
 }
